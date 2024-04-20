@@ -1,5 +1,9 @@
 <script>
 	import sphere from '$lib/assets/sphere.svg';
+	let swiftxr = {
+		projectName: 'SwiftXR Svelte yt',
+		projectUrl: 'https://tested-event.swiftxr.app'
+	};
 </script>
 
 <svelte:head>
@@ -20,7 +24,20 @@
 		</header>
 		<!-- TODO: replace static image with a swiftxr embed -->
 		<div class="swiftxr-panel mt-24 h-96">
-			<img src={sphere} alt="the aging sphere" />
+			<!-- <img src={sphere} alt="the aging sphere" /> -->
+			<iframe
+				title={swiftxr.projectName}
+				frameborder="0"
+				allowfullscreen
+				mozallowfullscreen="true"
+				webkitallowfullscreen="true"
+				allow="fullscreen; autoplay; xr-spatial-tracking; camera; midi; encrypted-media;"
+				execution-while-out-of-viewport
+				execution-while-not-rendered
+				web-share
+				src={swiftxr.projectUrl}
+			>
+			</iframe>
 		</div>
 		<!-- TODO: replace static image with a swiftxr embed -->
 		<div class="panel-desc mt-10 flex flex-col items-center justify-center gap-9">
@@ -44,8 +61,8 @@
 				<span>pluto</span>
 			</p>
 			<p class="font-inter text-sm text-center text-[#3d67cf] tracking-tight uppercase mt-4">
-				<a href="/3D"
-					>3D
+				<a href="/"
+					>NO 3D
 					<span class="inline-block align-bottom h-4 w-4"
 						><svg width="12" height="12" viewBox="0 0 24 24"
 							><path fill="#3d67cf" d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z" /></svg
@@ -64,5 +81,10 @@
 
 	.panel-desc {
 		text-align-last: center;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
 	}
 </style>
