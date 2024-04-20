@@ -12,9 +12,9 @@
 </svelte:head>
 
 <main>
-	<div class="max-w-2xl mx-auto flex flex-col items-center justify-center">
+	<div class="md:max-w-2xl w-full px-2 mx-auto flex flex-col items-center justify-center">
 		<header>
-			<h1 class="font-damion text-9xl mt-20 text-white tracking-tighter">the aging sphere</h1>
+			<h1 class="font-damion lg:text-8xl text-6xl mt-20 text-white text-center tracking-tighter">the aging sphere</h1>
 		</header>
         <!-- TODO: replace static image with a swiftxr embed -->
 		<div class="swiftxr-panel mt-24">
